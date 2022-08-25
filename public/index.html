@@ -16,7 +16,7 @@
 		<script src="script/scrollreveal.js"></script>
 		<link rel="stylesheet" href="style/swiper.min.css" />
 		<link rel="stylesheet" href="style/style.css" />
-		<!-- <link rel="stylesheet" href="../style/style.css" /> -->
+		<!-- <link rel="stylesheet" href="../style.css" /> -->
 		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 		<script
 			type="text/javascript"
@@ -251,11 +251,10 @@
 							</p>
 						</div>
 						<div class="form">
-							<form action="includes/contact_us.php" method="POST">
-								<input type="hidden" name="token" value="" />
+							<form id="contact_us">
 								<div class="row">
-									<input type="text" placeholder="Email" />
-									<input type="text" placeholder="Subject" />
+									<input type="email" placeholder="Email" name="email" />
+									<input type="text" placeholder="Subject" name="subject" />
 								</div>
 								<div class="row">
 									<textarea name="message" rows="8"></textarea>
@@ -269,7 +268,7 @@
 				</div>
 			</section>
 
-			<!-- <section
+			<section
 				class="in-progress"
 				id="in-progress"
 				onmouseover="mouseEnter(this)"
@@ -292,7 +291,7 @@
 						</div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 		</main>
 
 		<footer>
@@ -327,5 +326,19 @@
 		<script src="script/swiper.min.js"></script>
 		<script src="script/custome_swiper.js"></script>
 		<script src="script/script.js"></script>
+		<script>
+			let form = document.querySelector('#contact_us');
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				let formData = new FormData(event.target);
+				let email = formData.get('email');
+				let subject = formData.get('subject');
+				let message = formData.get('message');
+
+				window.location.href = `mailto:skdesign3899@gmail.com?subject=${subject}&body=${message}`;
+
+				alert('We will connect with you soon');
+			});
+		</script>
 	</body>
 </html>
