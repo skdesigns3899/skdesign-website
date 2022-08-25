@@ -1,0 +1,36 @@
+:root {
+	--swiper-theme-color: #1f1f1f;
+}
+
+.d-none {
+	display: none !important;
+}
+
+
+//common for all the heading with bottom bar
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h2 {
+		display: inline;
+		text-align: center;
+		position: relative;
+		font-weight: 800;
+		text-transform: uppercase;
+		z-index: 1;
+		&::after {
+			content: '';
+			position: absolute;
+			height: 40%;
+			width: 100%;
+			left: 0.5rem;
+			top: 1.25rem;
+			border-radius: 10rem;
+			background: $secondary-color;
+			z-index: -1;
+			// opacity: .8;
+		}
+	}
+}
+//common for all the heading with bottom bar

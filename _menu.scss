@@ -1,0 +1,154 @@
+header {
+	position: fixed;
+	width: 100%;
+	background: $second-background;
+	// box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.06);
+	height: 15vh;
+	z-index: 99;
+	.menu-toggle {
+		width: 4rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		position: absolute;
+		right: 0;
+		margin-right: 2rem;
+		i {
+			font-size: 2rem;
+			position: absolute;
+			&.fa-times {
+				display: none;
+			}
+		}
+	}
+	.wrapper {
+		height: 15vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.logo {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 40%;
+			}
+		}
+	}
+	.nav-list {
+		display: none;
+	}
+
+	&.open {
+		height: 100%;
+		@include tran;
+		.nav {
+			position: relative;
+			background: $second-background;
+			.menu-toggle {
+				position: absolute;
+				right: -6.5rem;
+				padding-top: 7rem;
+				i.fa-bars {
+					display: none;
+				}
+				i.fa-times {
+					display: inline-block;
+					z-index: 999;
+				}
+			}
+
+			.wrapper {
+				display: none;
+			}
+			.nav-list {
+				background: $second-background;
+				width: 100vw;
+				height: 80vh;
+				margin-top: 10vh;
+				position: absolute;
+				list-style: none;
+				z-index: 99;
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-around;
+				gap: 2rem;
+				font-size: 3rem;
+				flex-direction: column;
+				@include tran;
+
+				.nav-item {
+					@include tran(0.1);
+				}
+				.nav-item.active a {
+					color: $third-color;
+					font-weight: 700;
+				}
+
+				.nav-item:hover a,
+				.nav-item:focus a {
+					color: $third-color;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-up(desktop) {
+		& {
+			background: $second-background;
+			height: auto;
+			// box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.06);
+			padding: 0;
+		}
+		.nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			gap: 1rem;
+			padding: 0;
+
+			.menu-toggle {
+				display: none;
+			}
+
+			.wrapper {
+				width: 30%;
+				.logo {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+			}
+
+			.nav-list {
+				width: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				flex-direction: row;
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				.nav-item a {
+					font-size: 0.75rem;
+					@include tran(0.1);
+				}
+				.nav-item.active a {
+					color: $third-color;
+					font-weight: 700;
+				}
+
+				.nav-item:hover a,
+				.nav-item:focus a {
+					color: $third-color;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

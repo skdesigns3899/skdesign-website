@@ -1,0 +1,97 @@
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background: $second-background;
+	z-index: 999;
+	.container {
+		max-width: 100%;
+		padding: 1rem 0;
+		.wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: column;
+			width: 100%;
+			gap: 1rem;
+			@include breakpoint-up(tablet) {
+				flex-direction: row;
+			}
+			* {
+				font-size: 1rem;
+				font-weight: 500;
+				color: $text-color;
+				&:active,
+				&:focus {
+					color: $secondary-color;
+					font-weight: 500;
+				}
+				&:hover {
+					color: $secondary-color;
+					font-weight: 500;
+				}
+				@include breakpoint-up(tablet) {
+					font-size: 0.75rem;
+				}
+			}
+			.copyright {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				@include breakpoint-up(tablet) {
+					margin-left: 1rem;
+					width: 30%;
+					text-align: right;
+				}
+			}
+			.contact-detail {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include breakpoint-up(tablet) {
+					width: 30%;
+				}
+				.wrapper {
+					width: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
+					@include breakpoint-up(tablet) {
+						width: 100%;
+					}
+					@include breakpoint-up(desktop) {
+						width: 80%;
+					}
+
+					span.line {
+						width: 0.1rem;
+						height: 1rem;
+						background: $third-color;
+					}
+				}
+			}
+
+			.social-media-icons {
+				width: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include breakpoint-up(tablet) {
+					width: 30%;
+				}
+				ul {
+					width: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					list-style: none;
+				}
+			}
+		}
+	}
+}

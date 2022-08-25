@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Skdesign3899</title>
+		<!-- cdn start -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		/>
+		<script src="script/scrollreveal.js"></script>
+		<link rel="stylesheet" href="style/swiper.min.css" />
+		<link rel="stylesheet" href="style/style.css" />
+		<!-- <link rel="stylesheet" href="../style/style.css" /> -->
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+		<script
+			type="text/javascript"
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+		></script>
+		<script type="text/javascript" src="script/jquery.mixitup.min.js"></script>
+
+		<link rel="stylesheet" href="style/lightbox.min.css" />
+		<script src="script/lightbox.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav class="nav">
+					<div class="menu-toggle">
+						<i class="fas fa-bars"></i>
+						<i class="fas fa-times"></i>
+					</div>
+					<div class="wrapper">
+						<a href="#" class="logo"><img src="./img/logo.png" alt="" /></a>
+					</div>
+					<ul class="nav-list" id="navlist">
+						<li class="nav-item active">
+							<a href="#" class="nav-link">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a href="#our-services" class="nav-link">SERVICE</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a href="#portfolio" class="nav-link">PORTFOLIO</a>
+						</li> -->
+						<li class="nav-item">
+							<a href="#about-us" class="nav-link">ABOUT</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contact-us" class="nav-link">CONTACT</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="hero" onmouseover="mouseEnter(this)">
+				<div class="container">
+					<div class="wrapper">
+						<div class="text">
+							<p>Expert ?</p>
+							<h2>
+								Hi, We have Expert <br />
+								IT Consultancy
+							</h2>
+
+							<div class="button">
+								<a href="#contact-us">Contact Us</a>
+							</div>
+						</div>
+						<div class="slider">
+							<img src="./img/about-us.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="our-services"
+				id="our-services"
+				onmouseover="mouseEnter(this)"
+			>
+				<div class="container">
+					<div class="heading">
+						<h2>Our Services</h2>
+					</div>
+					<div class="wrapper">
+						<div class="wrapper-row">
+							<div class="our-services-items">
+								<h2>Research</h2>
+								<p>
+									Heuristic Analysis, Design Audit, Usability Testing,
+									Ethnographic Research, Emerging Trends, UX research
+								</p>
+							</div>
+							<div class="our-services-items active">
+								<h2>Design</h2>
+								<p>
+									Digital Branding, User Experience Design, User interface
+									Design, Interaction Design, Digital Prototyping, Motion
+									Graphics
+								</p>
+							</div>
+							<div class="our-services-items">
+								<h2>Build</h2>
+								<p>
+									Front-End Development, Web Application, Mobile Application,
+									Custom Application, SAAS Implementation
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section class="portfolio" id="portfolio" onmouseover="mouseEnter(this)">
+				<div class="container">
+					<div class="heading">
+						<h2>PORTFOLIO</h2>
+					</div>
+					<div class="wrapper">
+						<ul id="filters" class="clearfix">
+							<li>
+								<span
+									class="filter"
+									data-filter=".pre-wedding, .birthday, .modeling, .outdoor"
+									>All</span
+								>
+							</li>
+							<li>
+								<span class="filter active" data-filter=".pre-wedding"
+									>pre-wedding</span
+								>
+							</li>
+							<li>
+								<span class="filter" data-filter=".birthday">birthday</span>
+							</li>
+							<li>
+								<span class="filter" data-filter=".modeling">modeling</span>
+							</li>
+							<li>
+								<span class="filter" data-filter=".outdoor">outdoor</span>
+							</li>
+						</ul>
+
+						<div id="portfoliolist">
+							<div class="portfolio pre-wedding" data-cat="pre-wedding">
+								<div class="portfolio-wrapper">
+									<a
+										href="img/portfolios/pre-wedding/1.jpg"
+										data-lightbox="portfolio"
+										data-title="Pre Wedding Photography"
+									>
+										<img src="img/portfolios/pre-wedding/1.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+
+							<div class="portfolio modeling" data-cat="modeling">
+								<div class="portfolio-wrapper">
+									<a
+										href="img/portfolios/modeling/1.jpg"
+										data-lightbox="portfolio"
+										data-title="Modeling Photography"
+										><img src="img/portfolios/modeling/1.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+
+							<div class="portfolio birthday" data-cat="birthday">
+								<div class="portfolio-wrapper">
+									<a
+										href="img/portfolios/birthday/1.jpg"
+										data-lightbox="portfolio"
+										data-title="Birthday Photography"
+										><img src="img/portfolios/birthday/1.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+
+							<div class="portfolio outdoor" data-cat="outdoor">
+								<div class="portfolio-wrapper">
+									<a
+										href="img/portfolios/logo/4.jpg"
+										data-lightbox="portfolio"
+										data-title="Outdoor Photography"
+										><img src="img/portfolios/logo/4.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+
+							<div class="portfolio outdoor" data-cat="outdoor">
+								<div class="portfolio-wrapper">
+									<a
+										href="img/portfolios/logo/4.jpg"
+										data-lightbox="portfolio"
+										data-title="Outdoor Photography"
+										><img src="img/portfolios/logo/4.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<section class="about-us" id="about-us" onmouseover="mouseEnter(this)">
+				<div class="container">
+					<div class="heading">
+						<h2>About Us</h2>
+					</div>
+					<div class="wrapper">
+						<div class="text">
+							<!-- <p class="sub-heading">Expert</p> -->
+							<h2>A TRUE DIGITAL PARTNER</h2>
+							<p class="description">
+								When you partner with Coretus Technologies, we assemble an
+								experienced interdisciplinary team to make your vision real &
+								Successfull.
+							</p>
+						</div>
+						<div class="img">
+							<img src="img/logo.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="contact-us"
+				id="contact-us"
+				onmouseover="mouseEnter(this)"
+			>
+				<div class="container">
+					<div class="heading">
+						<h2>Contact Us</h2>
+					</div>
+					<div class="wrapper">
+						<div class="text">
+							<p class="sub-heading">Let’s Work Together</p>
+							<h2>For Expert</h2>
+							<p class="description">
+								Get in touch to let us know what you’re looking for and one of
+								our solutions architects will get back to you soon.
+							</p>
+						</div>
+						<div class="form">
+							<form action="includes/contact_us.php" method="POST">
+								<input type="hidden" name="token" value="" />
+								<div class="row">
+									<input type="text" placeholder="Email" />
+									<input type="text" placeholder="Subject" />
+								</div>
+								<div class="row">
+									<textarea name="message" rows="8"></textarea>
+								</div>
+								<div class="row">
+									<button type="submit">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section
+				class="in-progress"
+				id="in-progress"
+				onmouseover="mouseEnter(this)"
+			>
+				<div class="container">
+					<div class="wrapper">
+						<div class="text">
+							<p>In Progress ?</p>
+							<h2>
+								Connect with us so we are using this single page website so we
+								all can
+							</h2>
+
+							<div class="button">
+								<a href="#contact-us">Contact Us</a>
+							</div>
+						</div>
+						<div class="slider">
+							<img src="./img/about-us.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section> -->
+		</main>
+
+		<footer>
+			<div class="container">
+				<div class="wrapper">
+					<div class="copyright">
+						<a href="#">&copy; skdesign3899 2020</a>
+					</div>
+					<div class="contact-detail">
+						<div class="wrapper">
+							<a href="mailto:skdesign3899@gmail.com">skdesign3899@gmail.com</a>
+						</div>
+					</div>
+					<!-- <div class="social-media-icons">
+						<ul>
+							<li>
+								<a href="#" class="fab fa-instagram"></a>
+							</li>
+							<li>
+								<a href="#" class="fab fa-twitter"></a>
+							</li>
+							<li>
+								<a href="#" class="fab fa-facebook-f"></a>
+							</li>
+						</ul>
+					</div> -->
+				</div>
+			</div>
+		</footer>
+
+		<script src="script/menu.js"></script>
+		<script src="script/swiper.min.js"></script>
+		<script src="script/custome_swiper.js"></script>
+		<script src="script/script.js"></script>
+	</body>
+</html>
